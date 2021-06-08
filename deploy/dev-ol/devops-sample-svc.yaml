@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: kubesphere
+    app: devops-java-sample
     component: deploy-to-dev
   name: deploy-to-dev
   namespace: qunliworkspace
@@ -14,7 +14,7 @@ spec:
       targetPort: 8080
       nodePort: 30861
   selector:
-    app: kubesphere
+    app: devops-java-sample
     component: deploy-to-dev
     tier: backend
   sessionAffinity: None
