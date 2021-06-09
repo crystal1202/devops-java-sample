@@ -6,6 +6,10 @@ metadata:
     component: deploy-to-dev
   name: deploy-to-dev
   namespace: qunliworkspace
+rules:
+  - apiGroups: ["", "extensions", "apps"]
+    resources: ["configmaps", "pods", "services", "endpoints", "secrets"]
+    verbs: ["get", "list", "watch"]
 spec:
   ports:
     - name: http
